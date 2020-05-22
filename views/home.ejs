@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <title>
+                TODO App
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="home.css">
+    </head>
+    <body>
+        <h1>TODO App</h1>
+         <div>
+            <form action="/create" method="POST">
+                <label for="description">Description</label>
+                <input type="text" name="description" placeholder="Description" required>
+                <label for="category">Choose a Category</label>
+                <select name="category" required>
+
+                    <option value="choose" disabled selected>Choose a category</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="School">School</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="Other">Other</option>
+
+                </select>
+                <label for="dueDate">Due Date</label>
+                <input type="date" name="dueDate" required>
+                <button type="submit">Submit</button>
+
+            </form>
+        </div> 
+
+        <div>
+            <h1>Tasks</h1>
+            <form action="/delete" method="POST">
+        
+                <%for(let i of todo_list){%>
+                    <input type="checkbox" name="delete" value="<%=i._id%>">
+                    <!-- <%=i.description%></br>
+                    <h3 class="category"><%=i.category%></h3><%=i.dueDate%><br> -->
+                    <div class="task-holder">
+                        <div class="date-holder">
+                            <div class="dd-date-holder">
+                                <p><%=i.dueDate.getDate()%><span class="month"><%=i.dueDate.getMonth()%></span><span class="year"><%=i.dueDate.getFullYear()-2000%></span></p>
+                            </div>
+                            <div class="task-text-holder"><p><%=i.description%></p></div>
+            
+                    </div>
+                        <div class="category-holder">
+                            <div class="category-text-holder"><p class="typeOfCategory"><%=i.category%></p></div>
+                        </div>
+            
+                    </div>
+                    <%} %>
+                    <button type="submit">Delete</button>
+            </form>
+         
+
+                    
+        </div>
+        </div>
+        <script>
+            var categoryArray=document.getElementsByClassName("typeOfCategory");
+            var taskHolder=document.getElementsByClassName("task-holder");
+            for(let i in categoryArray){
+                categoryText=categoryArray[i].innerText;
+                taskHolderElement=taskHolder[i];
+                typeOfCategory=categoryArray[i];
+
+                if(categoryText=="School"){
+                typeOfCategory.style.color="red";
+                taskHolderElement.style.backgroundColor="red";
+            }
+            else if(categoryText=="Personal"){
+                typeOfCategory.style.color="#001f3f";
+                taskHolderElement.style.backgroundColor="#001f3f";
+            }
+            else if(categoryText=="Other"){
+                typeOfCategory.style.color="#B10DC9";
+                taskHolderElement.style.backgroundColor="#B10DC9"
+            }
+            else if(categoryText=="Work"){
+                typeOfCategory.style.color="#2ECC40";
+                taskHolderElement.style.backgroundColor="#2ECC40";}
+
+            else if(categoryText=="Cleaning"){
+                typeOfCategory.style.color="#0074D9";
+                taskHolderElement.style.backgroundColor="#0074D9";
+
+            }
+            
+            }
+
+        </script>
+        <script>
+            var monArray=document.getElementsByClassName("month");
+            for(let i in monArray)
+            {
+                if(monArray[i].innerText==="0"){
+                    monArray[i].innerText="Jan"+" ' ";
+                }
+                else if(monArray[i].innerText==="1"){
+                    monArray[i].innerText="Feb"+" ' ";
+                }
+                else if(monArray[i].innerText==="2"){
+                    monArray[i].innerText="Mar"+" ' ";
+                }
+                else if(monArray[i].innerText==="3"){
+                    monArray[i].innerText="Apr"+" ' ";
+                }
+                else if(monArray[i].innerText==="4"){
+                    monArray[i].innerText="May"+" ' ";
+                }
+                else if(monArray[i].innerText==="5"){
+                    monArray[i].innerText="Jun"+" ' ";
+                }
+                else if(monArray[i].innerText==="6"){
+                    monArray[i].innerText="Jul"+" ' ";
+                }
+                else if(monArray[i].innerText==="7"){
+                    monArray[i].innerText="Aug"+" ' ";
+                }
+                else if(monArray[i].innerText==="8"){
+                    monArray[i].innerText="Sep"+" ' ";
+                }
+                else if(monArray[i].innerText==="9"){
+                    monArray[i].innerText="Oct"+" ' ";
+                }
+                else if(monArray[i].innerText==="10"){
+                    monArray[i].innerText="Nov"+" ' ";
+                }
+                else if(monArray[i].innerText==="11"){
+                    monArray[i].innerText="Dec"+" ' ";
+                }
+            }
+
+            
+
+
+        </script>
+    </body>
+</html>

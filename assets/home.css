@@ -1,0 +1,119 @@
+body{
+    background: radial-gradient(113.98% 113.98% at 30.14% 97.27%, #000000 0%, #2E2C2C 89.36%, #3D3B3B 100%);
+    color: #F2EEEE;
+}
+
+.task-holder{
+    position: relative;
+    align-content: center;
+width: 500px;
+height: 160px;
+margin-top: 0%;
+margin-left: auto;
+margin-right: auto;
+/* left: 564px;
+top: 274px;  */
+
+/* background: linear-gradient(166.81deg, #FFFFFF -58.04%, #ABA7A7 79.27%); */
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+}
+
+.date-holder{
+    position: relative;
+width: 120px;
+height: 75px;
+margin-top: auto;
+margin-bottom: auto;
+left: -60px;
+top: 42.5px;
+/* left: 564px;
+top: 300px; */
+
+background: #F2EEEE;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+}
+
+.category-holder{
+    position: relative;
+width: 120px;
+height: 40px;
+left:370px;
+top: -85.5px;
+
+background: #F2EEEE;
+border-radius: 20px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.dd-date-holder{
+    position: relative;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    color: #000000;
+    text-align: center;
+    /* padding-top: -15px; */
+}
+
+.dd-date-holder span{
+    display: block;
+    position: relative;
+    font-family: Roboto;
+    font-style:normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 10px;
+    color: #000000;
+    text-align: center;
+
+}
+
+.task-text-holder{
+    position: relative;
+    width: 400px;
+height: 70px;
+left: 120px;
+/* left: 697.02px;
+top: 273.75px; */
+text-align: center;
+vertical-align: middle;
+top: -70px;
+left: 85px;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+color: #fafafa;
+
+}
+
+.category-text-holder{
+    
+    position: relative;
+    /* left: 697.02px;
+    top: 273.75px; */
+    text-align: center;
+    top: 8px;
+    vertical-align: middle;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fafafa;
+    
+    
+}
+.month{
+    text-align: left;
+    left:-20px;
+
+}
+.year{
+    text-align: right;
+    left:35px;
+    top:-10px;
+}
